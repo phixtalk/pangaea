@@ -31,15 +31,15 @@ if server successfully starts, you should see the output below in your terminal
 
 - Create a subscription
 
-    POST /subscribe/{topic} ==> http://localhost:8000/subscribe/topic1__
-    Expected Body: { url: string } ==> http://localhost:9000/test1__
-    Success Response:  201 { "url": "http://localhost:9000/test2", "topic": "topic1" }__
+    POST /subscribe/{topic} ==> http://localhost:8000/subscribe/topic1 <br/>
+    Expected Body: { url: string } ==> http://localhost:9000/test1 <br/>
+    Success Response:  201 { "url": "http://localhost:9000/test2", "topic": "topic1" } <br/>
 
 - Publish message to topic
 
-    POST /subscribe/{topic} ==> http://localhost:8000/publish/topic1__
-    Expected Body: { [key: string]: any } ==> customMessage = hello👋__
-    Success Response:  200 { "status": "success", "data": "Notification sent successfully" }__
+    POST /subscribe/{topic} ==> http://localhost:8000/publish/topic1 <br/>
+    Expected Body: { [key: string]: any } ==> customMessage = hello👋 <br/>
+    Success Response:  200 { "status": "success", "data": "Notification sent successfully" } <br/>
 
 - Screenshot of terminal
 
