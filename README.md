@@ -42,6 +42,7 @@ if server successfully starts, you should see the output below in your terminal
     Success Response:  200 { "status": "success", "data": "Notification sent successfully" } <br/>
 
 - Screenshot of terminal
+<img width="508" alt="Screenshot 2021-12-22 at 7 29 22 AM" src="https://user-images.githubusercontent.com/9976895/147149716-c69d08d9-26e7-4f18-b4a4-a92044fc55d7.png">
 
 
 - #### Architecture Pattern
