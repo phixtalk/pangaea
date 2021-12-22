@@ -15,3 +15,5 @@ module.exports.connectToDB = async () => {
   console.log("mongo_db", "connected to db");
   return conn; 
 }
+
+module.exports.subscribers = []
