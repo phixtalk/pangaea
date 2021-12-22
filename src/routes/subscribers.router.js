@@ -3,7 +3,7 @@ const router = express.Router();
 const Response = require('../utils/response.utils');
 
 router.post("/", (req, res) => {
-    console.log("Server2", req.body);
+    console.log("Subscriber server:", req.body);
     Response.Success(res, req.body); 
 });
 
