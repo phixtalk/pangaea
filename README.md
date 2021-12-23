@@ -60,7 +60,7 @@ if server successfully starts, you should see the output below in your terminal
       The following test libraries was used for writing the test cases:
         - jest
         
-        <img width="455" alt="Screenshot 2021-12-23 at 8 56 18 AM" src="https://user-images.githubusercontent.com/9976895/147271008-ff64eef7-a57c-488c-86e2-5fc68fa980cd.png">        
+<img width="455" alt="Screenshot 2021-12-23 at 8 56 18 AM" src="https://user-images.githubusercontent.com/9976895/147271008-ff64eef7-a57c-488c-86e2-5fc68fa980cd.png"> 
 
 - #### Possible Improvement
 
