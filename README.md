@@ -58,7 +58,11 @@ if server successfully starts, you should see the output below in your terminal
 - #### Unit Testing
 
       The following test libraries was used for writing the test cases:
+        - jest
         - chai
         - chai-http
         - mocha
-        - jest
+
+- #### Possible Improvement
+
+      Considering that the number of subscribers can grow significantly, giving us an O(n) time complexity, the solution can be improved to use a queuing system where the notifications are sent in batches within a space of time.

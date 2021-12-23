@@ -2,8 +2,9 @@ require("dotenv").config();
 const mongoose = require('mongoose');
 
 let conn = null;
-
 const uri=process.env.DB_CONNECT;
+
+const database = [];
 
 module.exports.connectToDB = async () => {
   if (conn == null) {
@@ -16,4 +17,4 @@ module.exports.connectToDB = async () => {
   return conn; 
 }
 
-module.exports.subscribers = []
+module.exports.subscribers = () => database;

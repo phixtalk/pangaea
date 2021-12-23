@@ -5,7 +5,7 @@ module.exports = class Publisher {
     constructor() {}
 
     getSubscribersByTopic(topic) {
-        const subscribers = database.subscribers;
+        const subscribers = database.subscribers();
         if(subscribers.length == 0){
             return undefined;
         }
@@ -27,6 +27,6 @@ module.exports = class Publisher {
         const data = {};
         data[firstKey] = body[firstKey];
         const payload = { topic, data };
-        await axios.post(url, payload);
+        return await axios.post(url, payload);
     }
 };

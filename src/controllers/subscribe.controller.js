@@ -6,7 +6,7 @@ module.exports.createSubscription = async ({ body: {url}, params: { topic } }, r
         if(url && topic){
             const subscribeService = new SubscribeService();
             const data = {url, topic};
-            await subscribeService.createSubscription(data, data);
+            await subscribeService.createSubscription(data);
             res.status(201).json(data);
             //Response.Success(res, data, 201); 
         }else{
