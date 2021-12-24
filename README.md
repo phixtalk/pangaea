@@ -42,7 +42,8 @@ if server successfully starts, you should see the output below in your terminal
     Success Response:  200 { "status": "success", "data": "Notification sent successfully" } <br/>
 
 - Screenshot of terminal
-<img width="508" alt="Screenshot 2021-12-22 at 7 29 22 AM" src="https://user-images.githubusercontent.com/9976895/147149716-c69d08d9-26e7-4f18-b4a4-a92044fc55d7.png">
+
+<img width="460" alt="Screenshot 2021-12-24 at 3 24 20 AM" src="https://user-images.githubusercontent.com/9976895/147348869-6a2c6aae-9da2-46aa-8edb-06a7214e5dfb.png">
 
 
 - #### Architecture Pattern
@@ -68,4 +69,4 @@ if server successfully starts, you should see the output below in your terminal
 
 - #### Possible Improvement
 
-      Considering that the number of subscribers can grow significantly, giving us an O(n) time complexity, the solution can be improved by using a queuing system where the notifications are sent in batches within a space of time.
+    Considering that the number of subscribers can grow significantly, giving us an O(n) time complexity, the solution can be improved by using a queuing system where the notifications are sent in batches within a space of time.
