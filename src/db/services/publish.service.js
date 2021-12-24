@@ -15,18 +15,15 @@ module.exports = class Publisher {
     async sendNotification(topic, body){
         const subscribers = this.getSubscribersByTopic(topic);
         if(subscribers){
-            for (let i = 0; i < subscribers.length; i++) {
-                const item = subscribers[i];
-                await this.send(item.url, topic, body);
-            }
+            const firstKey = Object.keys(body)[0];
+            const data = {};
+            data[firstKey] = body[firstKey];
+            const payload = { topic, data };
+            await this.send(subscribers, payload);
         }
     }
 
-    async send(url, topic, body){
-        const firstKey = Object.keys(body)[0];
-        const data = {};
-        data[firstKey] = body[firstKey];
-        const payload = { topic, data };
-        return await axios.post(url, payload);
+    async send(subscribers, payload){
+        return await Promise.all(subscribers.map((sub) => axios.post(sub.url, payload)));
     }
 };

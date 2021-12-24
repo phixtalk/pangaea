@@ -22,6 +22,13 @@ app.use("/publish", publishRoute);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
-  console.log(`Publisher server is running on port ${PORT}.`);
-});
+
+const nodeEnv = process.env.NODE_ENV || 'dev';
+
+if(nodeEnv != "test"){
+  app.listen(8000, () => {
+    console.log(`Publisher server is running on port ${PORT}.`);
+  });  
+}
+
+module.exports.app = app;

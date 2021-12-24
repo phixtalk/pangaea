@@ -55,13 +55,17 @@ if server successfully starts, you should see the output below in your terminal
         - raw: JSON
         - x-www-form-urlencoded
 
-- #### Unit Testing
+- #### Unit & Integration Tests
 
       The following test libraries was used for writing the test cases:
         - jest
+        - chai
+        - chai-http
+
+      To run tests, use npm run test
         
 <img width="455" alt="Screenshot 2021-12-23 at 8 56 18 AM" src="https://user-images.githubusercontent.com/9976895/147271008-ff64eef7-a57c-488c-86e2-5fc68fa980cd.png"> 
 
 - #### Possible Improvement
 
-      Considering that the number of subscribers can grow significantly, giving us an O(n) time complexity, the solution can be improved to use a queuing system where the notifications are sent in batches within a space of time.
+      Considering that the number of subscribers can grow significantly, giving us an O(n) time complexity, the solution can be improved by using a queuing system where the notifications are sent in batches within a space of time.

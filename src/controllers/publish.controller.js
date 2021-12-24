@@ -3,12 +3,12 @@ const Response = require('../utils/response.utils');
 
 module.exports.publisher = async ({ body, params: { topic } }, res) => {
     try {
-        if(body){
+        if(Object.keys(body).length){
             const publisher = new PublishService();
             await publisher.sendNotification(topic, body);  
             Response.Success(res, "Notification sent successfully"); 
         }else{
-            Response.BadRequestError(res, "Please provide message parameter.")
+            Response.BadRequestError(res, "Please provide body content.")
         }
     } catch (error) {
         Response.InternalServerError(res, error.message);

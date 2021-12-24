@@ -20,6 +20,12 @@ app1.use((req, res, next) => {
 app1.use("/test1", subscribers);
 app1.use("/test2", subscribers);
 
-app1.listen(9000, () => {
-  console.log("Subscriber server is running on port 9000");
-});
+const nodeEnv = process.env.NODE_ENV || 'dev';
+
+if(nodeEnv != "test"){
+  app1.listen(9000, () => {
+    console.log("Subscriber server is running on port 9000");
+  });
+}
+
+module.exports.app1 = app1;

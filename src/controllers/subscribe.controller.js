@@ -3,14 +3,13 @@ const Response = require('../utils/response.utils');
 
 module.exports.createSubscription = async ({ body: {url}, params: { topic } }, res) => {
     try {
-        if(url && topic){
+        if(url){
             const subscribeService = new SubscribeService();
             const data = {url, topic};
             await subscribeService.createSubscription(data);
             res.status(201).json(data);
-            //Response.Success(res, data, 201); 
         }else{
-            Response.BadRequestError(res, "Please provide url and topic parameters")
+            Response.BadRequestError(res, "Please provide url parameter")
         }
     } catch (error) {
         Response.InternalServerError(res, error.message);

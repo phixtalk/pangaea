@@ -46,14 +46,4 @@ describe('Publisher', () => {
         spy.mockRestore();
         spy2.mockRestore();
     });
-
-    it('send: should return axios response', async () => {
-        const response = { topic: 'topic1', data: { message: 'Hello' } };
-    
-        axios.post.mockImplementationOnce(() => Promise.resolve(response));
-
-        const publisher = new Publisher();
-        const res = await publisher.send("http://localhost:9000/test1", topic, body);
-        expect(res).toEqual(response);
-    });
 });
