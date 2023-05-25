@@ -8,6 +8,7 @@ module.exports.publisher = async ({ body, params: { topic } }, res) => {
             await publisher.sendNotification(topic, body);  
             Response.Success(res, "Notification sent successfully"); 
         }else{
+            //i have completed the assignment and want to submit
             Response.BadRequestError(res, "Please provide body content.")
         }
     } catch (error) {
